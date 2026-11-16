@@ -1,0 +1,33 @@
+{
+  "blocks": [
+    { "img": "interview.svg", "title": "Interview", "link": "/interview" },
+    { "img": "/gear.svg", "title": "Group Work", "link": "/group-work" },
+    {
+      "img": "/critical-thinking.svg",
+      "title": "Critical Thinking",
+      "link": "/critical-thinking"
+    },
+    {
+      "img": "/rubrics.svg",
+      "title": "Rubrics For Assessment",
+      "link": "/rubrics"
+    },
+    {
+      "img": "/smart.svg",
+      "title": "Gifted and talented",
+      "link": "/gifted-and-talented"
+    },
+    {
+      "img": "underachiver.svg",
+      "title": "Underachieving pupils",
+      "link": "/essay"
+    },
+    { "img": "/teacher.svg", "title": "Lesson Study", "link": "/lesson-study" },
+    { "img": "/leader.svg", "title": "Leader", "link": "/test-for-leader" },
+    {
+      "img": "/inclusive.svg",
+      "title": "Inclusive Education",
+      "link": "/inclusive-education"
+    }
+  ]
+}

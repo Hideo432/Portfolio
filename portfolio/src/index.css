@@ -1,0 +1,18 @@
+body {
+  /* Обращаемся от корня сайта */
+  cursor: url("/cursor.svg"), auto;
+}
+
+a,
+button,
+[role="button"],
+[onclick],
+input[type="submit"],
+input[type="button"],
+label[for],
+select,
+.cursor-pointer {
+  cursor:
+    url("/cursor-pointer.svg") 15 2,
+    pointer !important;
+}

@@ -1,0 +1,16 @@
+export const ROUTES = {
+  HOME: "/home",
+  GnT: "/gifted-and-talented",
+  LEADER_TEST: "test-for-leader",
+  QUEST: "quest",
+  INTERVIEW: "/interview",
+  GROUP_WORK: "/group-work",
+  RUBRICS: "/rubrics",
+  INCLUSIVE_EDUCATION: "/inclusive-edication",
+  ESSAY: "/essay",
+  CRITICAL_THINKING: "/critical-thinking",
+  RESULTS: "/inclusive-education",
+  LESSOS_STUDY: "/lesson-study",
+  BLOG: "/blog",
+  TASKS: "/tasks",
+};
