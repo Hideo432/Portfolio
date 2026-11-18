@@ -1,21 +1,24 @@
-import Home_item from "../components/home_item";
-import data from "../db/db.json";
-
-export default function Home() {
+import HomePageComponent from "../components/HomePageComponent";
+import TitleComponent from "../components/Title";
+import type { Theme } from "../types";
+interface Props {
+  theme: Theme;
+}
+export default function Home({ theme }: Props) {
   return (
-    <div className="text-center text-white flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-5xl font-bold p-10">Home</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center  px-4 max-w-6xl mx-auto w-full">
-        {data.blocks.map((item, key) => {
-          return (
-            <Home_item
-              key={key}
-              img={item.img}
-              title={item.title}
-              link={item.link}
-            />
-          );
-        })}
+    <div className="text-center relative  ">
+      <TitleComponent theme={theme} title="Home"></TitleComponent>
+      <div className="">
+        <HomePageComponent
+          img="teacher-img.jpg"
+          title="For a Future Educator"
+          text="My Pedagogical Landmarks A modern teacher is not merely a source of knowledge, but a navigator in the world of information, a mentor, and a partner in development. In my practice, I rely on the principles of humanistic pedagogy, critical thinking, and an individualized approach to every student. My primary goal is to create a safe and inspiring educational environment where mistakes are viewed as stepping stones for growth, and learning becomes a conscious and engaging process."
+        ></HomePageComponent>
+        <HomePageComponent
+          img="teacher-course.jpg"
+          title="Course: Teacher’s Landmarks / Pedagogical Orientation"
+          text="This course focuses on shaping the professional identity of a modern educator, discovering core value pillars, and building effective communication within the learning environment. The curriculum addresses contemporary challenges in education, digital literacy, the design of learning pathways, and the development of essential soft skills required by 21st-century teachers."
+        ></HomePageComponent>
       </div>
     </div>
   );

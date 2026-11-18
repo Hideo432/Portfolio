@@ -1,5 +1,6 @@
 export const ROUTES = {
   HOME: "/home",
+  ALL_PROJECTS: "/all_projectes",
   GnT: "/gifted-and-talented",
   LEADER_TEST: "test-for-leader",
   QUEST: "quest",

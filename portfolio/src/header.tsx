@@ -1,8 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "./routes";
 import { useState } from "react";
-
-export default function Header() {
+import type { Theme } from "./types";
+import { ThemeSwitch } from "./components/toggle";
+interface Props {
+  theme: Theme;
+  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
+}
+export default function Header({ theme, setTheme }: Props) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const navigate = useNavigate();
 
@@ -19,14 +24,27 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-between items-center px-6 bg-gray-800 text-white py-6 select-none relative z-50">
+    <header
+      className={`flex justify-between items-center px-6 relative ${
+        theme === "dark"
+          ? "bg-gray-800 text-white"
+          : theme === "light"
+            ? "bg-blue-400 text-black"
+            : "bg-gray-800 text-white"
+      }  py-6 select-none relative z-50`}
+    >
       <div
-        className="text-xl font-bold cursor-pointer"
+        className="text-xl font-bold cursor-pointer flex items-center gap-2"
         onClick={() => handleNavigate(ROUTES.HOME)}
       >
-        Portfolio
+        Portfolio{" "}
+        <div className="h-10 w-10  sm:h-20 sm:w-20">
+          <img src="/logo.svg"></img>
+        </div>
       </div>
-
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <ThemeSwitch setTheme={setTheme} theme={theme}></ThemeSwitch>
+      </div>
       <button
         onClick={toggleMenu}
         aria-label="Toggle menu"
@@ -71,6 +89,16 @@ export default function Header() {
             }`}
           >
             Home
+          </li>
+          <li
+            onClick={() => handleNavigate(ROUTES.ALL_PROJECTS)}
+            className={`text-3xl font-bold text-white hover:text-green-400 cursor-pointer transition-all duration-400 ${
+              showMenu
+                ? "opacity-100 translate-y-0 delay-200"
+                : "opacity-0 translate-y-5"
+            }`}
+          >
+            All Projects
           </li>
           <li
             onClick={() => handleNavigate(ROUTES.BLOG)}

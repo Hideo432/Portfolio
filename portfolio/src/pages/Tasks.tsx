@@ -1,9 +1,14 @@
 import BlogItem from "../components/blog_item";
+import TitleComponent from "../components/Title";
 import { ROUTES } from "../routes";
-export default function Tasks() {
+import type { Theme } from "../types";
+interface Props {
+  theme: Theme;
+}
+export default function Tasks({ theme }: Props) {
   return (
-    <div className="text-center ">
-      <h2 className="text-[30px] font-bold text-white">Tasks</h2>
+    <div className="text-center relative ">
+      <TitleComponent theme={theme} title="Tasks"></TitleComponent>
       <div className="flex flex-col gap-5 p-2  mx-auto ">
         <BlogItem
           bg_img_color="bg-blue-200"
