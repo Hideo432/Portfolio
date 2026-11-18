@@ -11,7 +11,7 @@ export default function Home_item({ img, title, link }: HomeItem) {
 
   return (
     <div
-      className="group flex items-center justify-between gap-10 px-10 py-3 bg-lime-700 mt-3 rounded-2xl git w-100 cursor-pointer"
+      className="group flex items-center justify-between gap-10 px-10 py-3 bg-lime-700 mt-3 rounded-2xl git w-80 cursor-pointer"
       onClick={() => navigate(link)}
     >
       <div className="w-25 h-25 shrink-0">
