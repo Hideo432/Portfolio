@@ -82,7 +82,7 @@ export default function Header({ theme, setTheme }: Props) {
         <ul className="flex flex-col items-center gap-6 text-center">
           <li
             onClick={() => handleNavigate(ROUTES.HOME)}
-            className={`text-3xl font-bold text-white hover:text-green-400 cursor-pointer transition-all duration-400 ${
+            className={` bg-gray-700 w-90 p-5 rounded-2xl hover:bg-green-700 text-[40px] sm:text-3xl font-bold text-white active:bg-green-700 cursor-pointer transition-all duration-300 ease-in ${
               showMenu
                 ? "opacity-100 translate-y-0 delay-200"
                 : "opacity-0 translate-y-5"
@@ -92,7 +92,7 @@ export default function Header({ theme, setTheme }: Props) {
           </li>
           <li
             onClick={() => handleNavigate(ROUTES.ALL_PROJECTS)}
-            className={`text-3xl font-bold text-white hover:text-green-400 cursor-pointer transition-all duration-400 ${
+            className={` bg-gray-700 w-90 p-5 rounded-2xl hover:bg-green-700 text-[40px] sm:text-3xl font-bold text-white active:bg-green-700 cursor-pointer transition-all duration-300 ease-in ${
               showMenu
                 ? "opacity-100 translate-y-0 delay-200"
                 : "opacity-0 translate-y-5"
@@ -102,23 +102,13 @@ export default function Header({ theme, setTheme }: Props) {
           </li>
           <li
             onClick={() => handleNavigate(ROUTES.BLOG)}
-            className={`text-3xl font-bold text-white hover:text-green-400 cursor-pointer transition-all duration-400 ${
+            className={` bg-gray-700 w-90 p-5 rounded-2xl hover:bg-green-700 text-[40px] sm:text-3xl font-bold text-white active:bg-green-700 cursor-pointer transition-all duration-300 ease-in ${
               showMenu
                 ? "opacity-100 translate-y-0 delay-300"
                 : "opacity-0 translate-y-5"
             }`}
           >
             Blog
-          </li>
-          <li
-            onClick={() => handleNavigate(ROUTES.TASKS)}
-            className={`text-3xl font-bold text-white hover:text-green-400 cursor-pointer transition-all duration-400 ${
-              showMenu
-                ? "opacity-100 translate-y-0 delay-400"
-                : "opacity-0 translate-y-5"
-            }`}
-          >
-            Tasks
           </li>
         </ul>
       </div>

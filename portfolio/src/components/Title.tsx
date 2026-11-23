@@ -11,7 +11,7 @@ export default function TitleComponent({ title, theme }: Props) {
   return (
     <div className=" flex justify-center  items-center cursor-pointer">
       <div
-        onClick={() => navigate(ROUTES.HOME)}
+        onClick={() => navigate(-1)}
         className="w-10 left-0  sm:left-10 absolute h-10 m-3 z-20"
       >
         <img
@@ -19,7 +19,7 @@ export default function TitleComponent({ title, theme }: Props) {
           alt=""
         />
       </div>
-      <h1 className="text-5xl font-bold p-10 ">{title}</h1>
+      <h1 className="text-[30px] sm:text-5xl font-bold p-10 ">{title}</h1>
     </div>
   );
 }

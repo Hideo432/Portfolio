@@ -1,4 +1,4 @@
-import Home_item from "../components/home_item";
+import Project_item from "../components/project_item";
 import TitleComponent from "../components/Title";
 import data from "../db/db.json";
 import type { Theme } from "../types";
@@ -13,7 +13,7 @@ export default function Projects({ theme }: Props) {
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-5 text-white px-4 max-w-6xl mx-auto mb-5">
         {data.blocks.map((item, key) => {
           return (
-            <Home_item
+            <Project_item
               key={key}
               img={item.img}
               title={item.title}

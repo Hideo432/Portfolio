@@ -27,8 +27,6 @@ export const ThemeSwitch: React.FC<ThemeSwitchProps> = ({
         isDark ? "bg-gray-700" : "bg-amber-200"
       }`}
     >
-      <span className="sr-only">Переключить тему</span>
-
       <span
         className={`flex h-6 w-6 transform items-center justify-center rounded-full bg-white shadow-md transition-transform duration-300 ${
           isDark

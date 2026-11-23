@@ -1,17 +1,16 @@
 import { useNavigate } from "react-router-dom";
 
-interface HomeItem {
+interface ProjectItem {
   img: string;
   title: string;
   link: string;
 }
 
-export default function Home_item({ img, title, link }: HomeItem) {
+export default function Project_item({ img, title, link }: ProjectItem) {
   const navigate = useNavigate();
-
   return (
     <div
-      className="group flex items-center justify-between gap-10 px-10 py-3 bg-lime-700 mt-3 rounded-2xl git w-90 cursor-pointer"
+      className="group flex items-center justify-between gap-10 px-10 py-3  bg-lime-700 mt-3 rounded-2xl git w-90 cursor-pointer"
       onClick={() => navigate(link)}
     >
       <div className="w-25 h-25 shrink-0">

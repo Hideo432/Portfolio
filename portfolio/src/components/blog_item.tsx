@@ -15,7 +15,6 @@ export default function BlogItem({ url, img, title, bg_img_color }: Props) {
       className="relative overflow-hidden flex border-10 active:border-amber-600 bg-white select-none rounded-[30px] hover:rounded-none transition-all duration-700 hover:border-gray-800 hover:text-green-600 cursor-pointer ease-in-out group"
       onClick={() => navigate(url)}
     >
-      {/* Левая часть с картинкой */}
       <div className={`w-1/2 h-50 sm:h-100 overflow-hidden  ${bg_img_color}`}>
         <img
           src={img}
