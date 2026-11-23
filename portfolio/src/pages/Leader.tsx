@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import type { Theme } from "../types";
 import TitleComponent from "../components/Title";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Если TitleComponent импортируется из другого файла, замените эту заглушку на свой импорт
 interface TitleProps {
@@ -66,7 +66,6 @@ const OPTIONS: { letter: AnswerOption; label: string }[] = [
 ];
 
 export default function Leader({ theme }: TitleProps) {
-  const navigate = useNavigate();
   const isDark = theme === "dark";
   const [font, setFont] = useState<number>(16);
   // Состояние для хранения выбранных ответов (ключ — id вопроса, значение — буква A-E)

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../routes";
+
 import type { Theme } from "../types";
 
 interface Props {

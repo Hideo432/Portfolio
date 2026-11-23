@@ -246,7 +246,7 @@ export default function LessonStudy({ theme }: Props) {
                     "Time and scheduling demands",
                     "Requires open collaboration",
                     "Lesson-level support",
-                  ].map((item, index) => (
+                  ].map((item) => (
                     <div key={item} className="flex gap-3 items-start">
                       <span className="mt-1 h-2 w-2 rounded-full bg-[#879879] shrink-0" />
                       <p className="text-sm leading-6 text-[#5c5e50]">{item}</p>
